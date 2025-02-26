@@ -1,5 +1,7 @@
 This project demonstrates how to setup a simple API for the todo application. The database is already configured and setup remotely. You just need to install the dependencies and start the server.
 
+NOTE: This application was tested on `node v23.3.0`
+
 ## Instructions
 
 Install dependencies:
