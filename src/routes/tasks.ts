@@ -47,10 +47,11 @@ router.get("/tasks/:id", async (req, res) => {
 router.patch("/tasks/:id", async (req, res) => {
   const id = parseInt(req.params.id);
   const { color, message, completed } = req.body;
+  const updatedAt = new Date();
   try {
     const task = await prisma.task.update({
       where: { id },
-      data: { color, message, completed },
+      data: { color, message, completed, updatedAt },
     });
     res.json(task);
   } catch (error) {
