@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx ts-node ./src/server.ts",
-    "build": "npx prisma generate && npm run dev",
+    "stage": "npx prisma generate && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -10,13 +10,13 @@ const PORT = process.env.PORT || 4000;
 app.use(express.json());
 app.use(cors());
 
+// Add routes
+app.use(tasks);
+
 // Ping url for health check
 app.get('/ping', (req, res) => {
   res.send('ok');
 });
-
-// Add routes
-app.use(tasks);
 
 // Start the server
 app.listen(PORT, () => {
